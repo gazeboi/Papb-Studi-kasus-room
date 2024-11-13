@@ -48,14 +48,3 @@ interface ItemsRepository {
      */
     suspend fun updateItem(item: Item)
 }
-/**
- * 1. Mendeklarasikan antarmuka `ItemsRepository` untuk menyediakan operasi CRUD
- *    pada data `Item`.
- * 2. Mengimpor `Flow` dari `kotlinx.coroutines.flow` agar dapat menggunakan aliran
- *    data secara asynchronous.
- * 3. Mendefinisikan fungsi `getAllItemsStream` untuk mengembalikan aliran yang
- *    berisi semua item dari sumber data.
- * 4. Mendefinisikan fungsi `getItemStream` yang mengambil aliran data dari item
- *    tertentu berdasarkan `id` yang diberikan.
- * 5. Mengimplementasikan fungsi `insertItem` untuk menambahkan item baru ke sumber data.
- */
