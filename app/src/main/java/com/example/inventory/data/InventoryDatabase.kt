@@ -32,4 +32,4 @@ abstract class InventoryDatabase : RoomDatabase() {
  * Dalam companion object, ada properti Instance yang volatile untuk menyimpans satu instance database,
  * memastikan hanya ada satu instance di seluruh aplikasi. Metode getDatabase() mengembalikan instance
  * database yang ada atau membuat instance baru dengan Room.databaseBuilder.
- *//
+ */
