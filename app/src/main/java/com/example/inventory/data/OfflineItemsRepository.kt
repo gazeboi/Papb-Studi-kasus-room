@@ -1,4 +1,21 @@
+/*
+ * Copyright (C) 2023 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.example.inventory.data
+
 
 import kotlinx.coroutines.flow.Flow
 
@@ -13,3 +30,16 @@ class OfflineItemsRepository(private val itemDao: ItemDao) : ItemsRepository {
 
     override suspend fun updateItem(item: Item) = itemDao.update(item)
 }
+/**
+ * 1. Mengimpor `ItemsRepository` untuk mengimplementasikan antarmuka yang telah
+ *    didefinisikan.
+ * 2. Mengimpor `Flow` dari `kotlinx.coroutines.flow` untuk menangani aliran
+ *    data secara asynchronous.
+ * 3. Mendefinisikan `getAllItemsStream` yang memanfaatkan `itemDao.getAllItems`
+ *    untuk mengambil seluruh data item dari database.
+ * 4. Mendefinisikan `getItemStream` dengan menggunakan `itemDao.getItem`
+ *    agar dapat memperoleh item spesifik berdasarkan `id` yang diminta.
+ * 5. Mengimplementasikan `insertItem` dengan cara memanggil `itemDao.insert`
+ *    untuk menambahkan item baru ke dalam database.
+
+ */

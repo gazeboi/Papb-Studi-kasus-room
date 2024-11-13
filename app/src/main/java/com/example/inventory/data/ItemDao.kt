@@ -29,3 +29,13 @@ interface ItemDao {
     @Delete
     suspend fun delete(item: Item)
 }
+/**
+ * 1. Mendeklarasikan antarmuka `ItemDao` sebagai Data Access Object (DAO)
+ *    untuk mengelola operasi database terkait `Item`.
+ * 2. Menggunakan anotasi `@Insert` untuk menambahkan item baru dengan strategi
+ *    konflik `IGNORE` jika item sudah ada.
+ * 3. Menggunakan anotasi `@Update` untuk memperbarui informasi item yang sudah ada.
+ * 4. Menggunakan anotasi `@Delete` untuk menghapus item dari database.
+ * 5. Mendefinisikan `@Query` untuk mengambil data item berdasarkan `id`
+ *    dan seluruh item yang diurutkan berdasarkan `name`.
+ */

@@ -44,11 +44,9 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
 @Preview(showBackground = true)
 @Composable
-fun InventoryAppPreview() {
-    InventoryTheme {
-        InventoryApp()
-    }
+fun InInventoryThemePreview(){
+    InventoryApp()
 }
-

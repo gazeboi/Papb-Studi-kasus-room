@@ -1,17 +1,9 @@
 package com.example.inventory.data
-
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-/**
- * InventoryDatabase adalah kelas abstrak yang mewakili database Room untuk aplikasi inventaris. Kelas
- * ini memiliki fungsi abstrak itemDao() yang memberikan akses ke ItemDao untuk menjalankan operasi CRUD.
- * Dalam companion object, ada properti Instance yang volatile untuk menyimpans satu instance database,
- * memastikan hanya ada satu instance di seluruh aplikasi. Metode getDatabase() mengembalikan instance
- * database yang ada atau membuat instance baru dengan Room.databaseBuilder.
- */
 @Database(entities = [Item::class], version = 1, exportSchema = false)
 abstract class InventoryDatabase : RoomDatabase() {
 
@@ -31,3 +23,13 @@ abstract class InventoryDatabase : RoomDatabase() {
         }
     }
 }
+
+
+
+/**
+ * InventoryDatabase adalah kelas abstrak yang mewakili database Room untuk aplikasi inventaris. Kelas
+ * ini memiliki fungsi abstrak itemDao() yang memberikan akses ke ItemDao untuk menjalankan operasi CRUD.
+ * Dalam companion object, ada properti Instance yang volatile untuk menyimpans satu instance database,
+ * memastikan hanya ada satu instance di seluruh aplikasi. Metode getDatabase() mengembalikan instance
+ * database yang ada atau membuat instance baru dengan Room.databaseBuilder.
+ */
