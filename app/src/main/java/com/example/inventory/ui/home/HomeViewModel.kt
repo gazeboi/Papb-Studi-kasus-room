@@ -18,11 +18,12 @@ package com.example.inventory.ui.home
 
 import androidx.lifecycle.ViewModel
 import com.example.inventory.data.Item
+import com.example.inventory.data.ItemsRepository
 
 /**
  * ViewModel to retrieve all items in the Room database.
  */
-class HomeViewModel : ViewModel() {
+class HomeViewModel(itemsRepository: ItemsRepository) : ViewModel() {
     companion object {
         private const val TIMEOUT_MILLIS = 5_000L
     }

@@ -22,6 +22,8 @@ import android.content.Context
  * App container for Dependency injection.
  */
 interface AppContainer {
+    fun OfflineItemsRepository(): OfflineItemsRepository
+
     val itemsRepository: ItemsRepository
 }
 
@@ -29,6 +31,10 @@ interface AppContainer {
  * [AppContainer] implementation that provides instance of [OfflineItemsRepository]
  */
 class AppDataContainer(private val context: Context) : AppContainer {
+    override fun OfflineItemsRepository(): OfflineItemsRepository {
+        TODO("Not yet implemented")
+    }
+
     /**
      * Implementation for [ItemsRepository]
      */
