@@ -34,7 +34,8 @@ interface ItemsRepository {
     fun getItemStream(id: Int): Flow<Item?>
 
     /**
-     * Menambahkan item baru ke sumber data.
+    
+     * Menambahkan item baru ke sumber Dataaa.
      */
     suspend fun insertItem(item: Item)
 
